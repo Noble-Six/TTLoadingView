@@ -8,7 +8,6 @@ env:
 before_install:
   
 script:
-  - set -o pipefail
   - curl -XPOST --silent --show-error --user ${TiggerUser}:${TiggerToken} ${TiggerAddress}/job/SDKTesterJenkins/buildWithParameters
 branches:
   only:
