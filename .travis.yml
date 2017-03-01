@@ -9,7 +9,7 @@ before_install:
   
 script:
   - curl -XPOST --silent --show-error --user ${TiggerUser}:${TiggerToken} ${TiggerAddress}/job/SDKTesterJenkins/buildWithParameters
-  - bash equality_test.sh
+  - bash queryLocalBuild.sh
 
 
 branches:
