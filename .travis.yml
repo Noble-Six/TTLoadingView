@@ -9,7 +9,7 @@ before_install:
   
 script:
   - curl -XPOST --silent --show-error --user ${TiggerUser}:${TiggerToken} ${TiggerAddress}/job/SDKTesterJenkins/buildWithParameters
-  - bash queryLocalBuild.sh
+  - travis_wait bash queryLocalBuild.sh
 
 
 branches:
