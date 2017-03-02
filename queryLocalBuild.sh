@@ -1,6 +1,8 @@
 GREP_RETURN_CODE=0
+echo ${QueryAddress}
 for ((i=0; i<=20; i++)); do
 	curl --silent ${QueryAddress} | grep result\":SUCCESS > /dev/null
+	GREP_RETURN_CODE=$?
 	if [ $GREP_RETURN_CODE -eq "1" ] ; then	
 		exit 0
 	elif [ $i -eq "19" ] ; then
