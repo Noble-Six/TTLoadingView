@@ -5,7 +5,7 @@ for ((i=0; i<=20; i++)); do
 	echo "check success return code : $GREP_RETURN_CODE"
 	if [ $GREP_RETURN_CODE -eq "0" ] ; then	
 		exit 0
-
+	fi
 	curl --silent ${QueryAddress} | grep result\":\"FAILURE\" > /dev/null
 	GREP_RETURN_CODE=$?
 	echo "check failure return code : $GREP_RETURN_CODE"
