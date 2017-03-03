@@ -1,4 +1,5 @@
 GREP_RETURN_CODE=0
+sleep 30
 for ((i=0; i<=20; i++)); do
 	curl --silent ${QueryAddress} | grep result\":\"SUCCESS\" > /dev/null
 	GREP_RETURN_CODE=$?
