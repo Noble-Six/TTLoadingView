@@ -17,7 +17,7 @@ for ((i=0; i<=20; i++)); do
 		echo "check local build result return : TIMEOUT"
 		exit 1
 	else
-		echo "sleep 60sec"
+		echo "sleep 60sec."
 		sleep 60
 	fi
 done
