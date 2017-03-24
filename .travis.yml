@@ -4,13 +4,25 @@ xcode_sdk: iphonesimulator10.0
 
 env:
   global:
- 
+  matrix:
+    - DESTINATION="OS=9.0,name=iPhone 5"       CONFIGURATION="Debug"     IsIntegrationTestingTask="true"
+    - DESTINATION="OS=9.0,name=iPhone 5"       CONFIGURATION="ReleaseTest"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.1,name=iPhone 5s"      CONFIGURATION="Debug"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.1,name=iPhone 5s"      CONFIGURATION="ReleaseTest"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.0,name=iPhone 6"       CONFIGURATION="Debug"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.0,name=iPhone 6"       CONFIGURATION="ReleaseTest"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.1,name=iPhone 6 Plus"  CONFIGURATION="Debug"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.1,name=iPhone 6 Plus"  CONFIGURATION="ReleaseTest"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.2,name=iPhone 6s"      CONFIGURATION="Debug"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.2,name=iPhone 6s"      CONFIGURATION="ReleaseTest"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.3,name=iPhone 6s Plus" CONFIGURATION="Debug"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=9.3,name=iPhone 6s Plus" CONFIGURATION="ReleaseTest"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=10.0,name=iPhone 6s"      CONFIGURATION="Debug"    IsIntegrationTestingTask="false"
+    - DESTINATION="OS=10.0,name=iPhone 6s"      CONFIGURATION="ReleaseTest"    IsIntegrationTestingTask="false"
 before_install:
   
 script:
-  - curl -XPOST --silent --show-error --user ${TiggerUser}:${TiggerToken} ${TiggerAddress}
-  - travis_wait bash LocalBuild.sh
-
+  - travis_wait bash IntegrationTesting.sh
 
 branches:
   only:
