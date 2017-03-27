@@ -1,7 +1,7 @@
 
 if $IsIntegrationTestingTask -eq "true" ; then
 	echo "start Integration testing..."
-	- curl -XPOST --silent --show-error --user ${TiggerUser}:${TiggerToken} ${TiggerAddress}
+	curl -XPOST --silent --show-error --user ${TiggerUser}:${TiggerToken} ${TiggerAddress}
 fi
 
 GREP_RETURN_CODE=0
