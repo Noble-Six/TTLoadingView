@@ -25,5 +25,3 @@ script:
   - travis_wait bash IntegrationTesting.sh
 
 branches:
-  only:
-    - master
