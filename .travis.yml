@@ -8,9 +8,8 @@ env:
     - DESTINATION="OS=10.0,name=iPhone 6s"      CONFIGURATION="Debug"    IsIntegrationTestingTask="true"
     - DESTINATION="OS=10.0,name=iPhone 6s"      CONFIGURATION="ReleaseTest"    IsIntegrationTestingTask="false"
 before_install:
-  
+  - sudo apt-get install -y libio-socket-ssl-perl libnet-ssleay-perl sendemail
 script:
-  - apt-get install libio-socket-ssl-perl libnet-ssleay-perl sendemail
   - sendemail -f panzh@tropo.com -t panzh@tropo.com -u subject -m "message" -s smtp.gmail.com -o tls=yes -xu panzh@tropo.com -xp Td?123456
 
 branches:
