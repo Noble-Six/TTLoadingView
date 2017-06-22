@@ -10,7 +10,8 @@ env:
 before_install:
   
 script:
-  - echo "this is the body" | mail -s "hello" "panzh@tropo.com" 
+  - apt-get install libio-socket-ssl-perl libnet-ssleay-perl sendemail
+  - sendemail -f panzh@tropo.com -t panzh@tropo.com -u subject -m "message" -s smtp.gmail.com -o tls=yes -xu panzh@tropo.com -xp Td?123456
 
 branches:
 
