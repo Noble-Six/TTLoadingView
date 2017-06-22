@@ -10,7 +10,6 @@ env:
 before_install:
   
 script:
-  - travis_wait bash LocalBuild.sh
   
 notifications:
   email:
