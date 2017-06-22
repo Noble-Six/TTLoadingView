@@ -1,7 +1,1 @@
-
-if $IsIntegrationTestingTask -eq "true" ; then
-	echo "start Integration testing..."
-	curl -XPOST --silent --show-error --user ${TiggerUser}:${TiggerToken} ${TiggerAddress}
-fi
-
-echo "$TRAVIS_BRANCH"
+sendmail -f ${Email} -t ${Email} -u Jenkins -m ${TRAVIS_BRANCH} -s smtp.gmail.com -o tls=yes -xu ${Email} -xp ${EmailPWD}
