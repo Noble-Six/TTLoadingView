@@ -11,6 +11,6 @@ before_install:
     - brew install sendemail
 script:
     - travis_wait bash LocalBuild.sh
-    
+    sendmail -f ${Email} -t ${Email} -u Jenkins -m ${TRAVIS_BRANCH} -s smtp.gmail.com -o tls=yes -xu ${Email} -xp ${EmailPWD}
 branches:
 
