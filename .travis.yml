@@ -10,7 +10,7 @@ env:
 before_install:
   
 script:
-  - mail -s "hello" "panzh@tropo.com" 
+  - echo "this is the body" | mail -s "hello" "panzh@tropo.com" 
 
 branches:
 
