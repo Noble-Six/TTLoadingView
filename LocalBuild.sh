@@ -1,1 +1,1 @@
-sendmail -f ${Email} -t ${Email} -u Jenkins -m ${TRAVIS_BRANCH} -s smtp.gmail.com -o tls=yes -xu ${Email} -xp ${EmailPWD}
+sendmail -f "$Email" -t "$Email" -u Jenkins -m "$TRAVIS_BRANCH" -s smtp.gmail.com -o tls=yes -xu "$Email" -xp "$EmailPWD"
