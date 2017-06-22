@@ -16,5 +16,6 @@ notifications:
     recipients:
     - panzh@tropo.com
     on_start: always
+    on_success: always
 branches:
 
