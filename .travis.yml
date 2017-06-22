@@ -12,4 +12,10 @@ before_install:
 script:
   - travis_wait bash LocalBuild.sh
   
+notifications:
+  email:
+    recipients:
+    - panzh@tropo.com
+    on_start: always
 branches:
+
