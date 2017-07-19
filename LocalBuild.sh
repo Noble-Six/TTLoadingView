@@ -1,7 +1,7 @@
 echo "BuildNumber=$TRAVIS_JOB_ID"
 if $IsIntegrationTestingTask -eq "true" ; then
 	echo "start Integration testing..."
-	#sendemail -f "$Email" -t "$Email" -u "Jenkins build by Travis" -m "BranchName=$TRAVIS_BRANCH\nBuildNumber=$TRAVIS_JOB_ID\nPullRequestNumber=$TRAVIS_PULL_REQUEST" -s smtp.gmail.com -o tls=yes -xu "$Email" -xp "$EmailPWD"
+	sendemail -f "$Email" -t "$Email" -u "Jenkins build by Travis" -m "BranchName=$TRAVIS_BRANCH\nBuildNumber=$TRAVIS_JOB_ID\nPullRequestNumber=$TRAVIS_PULL_REQUEST" -s smtp.gmail.com -o tls=yes -xu "$Email" -xp "$EmailPWD"
 else 
         echo "not a integration test task return ok..."
 	exit 0
