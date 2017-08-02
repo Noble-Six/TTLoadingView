@@ -10,6 +10,6 @@ env:
 before_install:
     - brew install sendemail
 script:
-    - travis_wait bash LocalBuild.sh
+
 branches:
 
