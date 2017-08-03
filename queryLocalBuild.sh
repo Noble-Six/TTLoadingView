@@ -11,7 +11,7 @@ for ((i=0; i<=20; i++)); do
 	curl --silent ${QueryAddress} | grep result\":\"FAILURE\" > /dev/null
 	GREP_RETURN_CODE=$?
 	if [ $GREP_RETURN_CODE -eq "0" ] ; then	
-		echo "check local build result return : FAILURE111adfsasdfasdfadf1"
+		echo "check local build result return : FAILURE111adfsasdadfsaffasdfadf1"
 		exit 1
 	elif [ $i -eq "19" ] ; then
 		echo "check local build result return : TIMEOUT"
