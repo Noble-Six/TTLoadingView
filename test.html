@@ -3,9 +3,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
+<style>
+body {
+  counter-reset: commits;
+}
+
+input:checked {
+  counter-increment: commits;
+}
+
+.total::after {
+  content: counter(commits);
+}
+</style>
 <div style="padding-left: 30px; padding-bottom: 15px;">
 
-	<div class="commits"><b>Commit </b><a href="https://github.com/Noble-Six/TT=
+	<div id="commits"><b>Commit </b><a href="https://github.com/Noble-Six/TT=
 	LoadingView/commit/830b2ca0616b16be2f426a36d3126f8c287c0abe">830b2ca0616b16b=
 	e2f426a36d3126f8c287c0abe</a><b> at Aug 3, 2017 12:07:15 PM</b>
 	
@@ -15,7 +28,7 @@
 	<div style="padding-left:30px;">--<em>test1231111 </em>--</div>
 	</div>
 
-	<div class="commits"><b>Commit </b><a href="https://github.com/Noble-Six/TT=
+	<div id="commits"><b>Commit </b><a href="https://github.com/Noble-Six/TT=
 	LoadingView/commit/37dff29a424554c816b748e1c236729f88168861">37dff29a424554c=
 	816b748e1c236729f88168861</a><b> at Aug 3, 2017 12:07:42 PM</b>
 	
@@ -28,11 +41,6 @@
 	<div style="padding-left:30px;">--<em>test1231111 </em>--</div>
 	</div>
 </div>
-<script>
-  var list = document.getElementsByClassName("commits");
-  for (var i = 1; i < list.length; i++) {
-   list[i].parentNode.removeChild(list[i]);
-  }
-</script>
+<strong class="total"></strong>
 </body>
 </html>
