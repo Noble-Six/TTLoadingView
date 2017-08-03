@@ -5,7 +5,7 @@ for ((i=0; i<=20; i++)); do
 	GREP_RETURN_CODE=$?
 	
 	if [ $GREP_RETURN_CODE -eq "0" ] ; then
-		echo "check local build result return : SUCCESS1231231"	
+		echo "check local build result return : SUCCESS11"	
 		exit 0
 	fi
 	curl --silent ${QueryAddress} | grep result\":\"FAILURE\" > /dev/null
